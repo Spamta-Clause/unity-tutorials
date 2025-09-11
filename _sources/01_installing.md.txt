@@ -1,0 +1,3 @@
+# Installing
+
+Firstly, we'll need Unity, (big shocker wow), to do that, we'll head right over to downloading [Unity Hub](https://unity.com/download), and click on 'Download for Windows', if you are using Mac, gtfo.
