@@ -3,4 +3,4 @@
 ```{toctree}
 :maxdepth: 2
 
-01_installing.html
+01_installing.md
