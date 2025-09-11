@@ -14,3 +14,9 @@ Now that the weirdos are gone, we have to sign in. Do that with google or whatev
 ### Visual Studio Code
  Wait. It'll take a minute or five. In the mean time, we'll install Visual Studio Code, you should all have it installed actually.
 
+### Github Desktop
+You also have this right? And we don't need it yet really.
+
+### Back on track
+Has Unity finished installing yet, if not, touch grass, otherwise let's continue.
+
