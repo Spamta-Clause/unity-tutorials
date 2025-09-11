@@ -1,1 +1,1 @@
-[[Installing, installing, and well, more installing]]
+[Install](/01_installing.md)
