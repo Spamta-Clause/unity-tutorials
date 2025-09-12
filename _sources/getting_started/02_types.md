@@ -101,5 +101,7 @@ public class Follower
 }
 ```
 
+#### Dictionaries
+We never learnt dictionaries in class actually, so here's a brief introduction. When you look in a dictionary you search up a word, and get its definition. In coding, you search up a _**key**_ and get back a _**value**_. So you might do something like dictionary["Clanker"] and get something like "An artifical intelligence." You can also get the key based on the value, but that is something for a later date.
 
 
