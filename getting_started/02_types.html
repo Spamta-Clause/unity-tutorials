@@ -31,6 +31,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=0514d644" />
+    <link rel="stylesheet" type="text/css" href="../_static/hacks.css?v=c85290b5" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -306,6 +307,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#protected">Protected</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-types">Variable types</a></li>
 </ul>
             </nav>
         </div>
@@ -325,7 +327,7 @@ document.write(`
 <p>Firstly, we’ll go over <em><strong>access modifiers</strong></em>, we have <em>private</em>, <em>protected</em>, and <em>public</em>. You’ve all worked through the Space Rescue, and Deepest Dungeon, and hopefully you now know how different classes work, and Object Oriented Programming, (a key concept in Unity / C#). We’ll have different classes / scripts, and these <em><strong>access modifiers</strong></em> determine how we can edit these. The main two we’ll see are private, and public.</p>
 <section id="private">
 <h3>Private<a class="headerlink" href="#private" title="Link to this heading">#</a></h3>
-<p>A <em><strong>private</strong></em> variable, cannot be accessed by other scripts. The following code is extremely simple and will be a bit different what base Unity scripts look like, but it should give an idea of how these works.</p>
+<p>A <em><strong>private</strong></em> variable,  <span class='red'>cannot be accessed by other scripts</span>. The following code is extremely simple and will be a bit different what base Unity scripts look like, but it should give an idea of how these works.</p>
 <div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">//A.cs</span>
 <span class="linenos"> 2</span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">A</span>
 <span class="linenos"> 3</span><span class="p">{</span>
@@ -341,7 +343,7 @@ document.write(`
 </div>
 <p><em>Class A</em> cannot access <em>Class B</em>’s number, just as <em>Class B</em> cannot access the value of <em>Class A</em>’s word. It simply cannot be done, and if you try, you’ll recieve the following error.
 <img alt="Error Message" src="../_images/02_01.png" /></p>
-<p>Red - Where the error occured. Yellow, - the character, then the line. Green - the snippet of code causing the issue. Blue - telling us that we cannot access A.word due to protection.</p>
+<p><span class='red'>Red</span> - Where the error occured. <span class='yellow'>Yellow</span>, - the character, then the line. <span class='lime'>Green</span> - the snippet of code causing the issue. <span class='blue'>Blue</span> - telling us that we cannot access A.word due to protection.</p>
 </section>
 <section id="public">
 <h3>Public<a class="headerlink" href="#public" title="Link to this heading">#</a></h3>
@@ -385,6 +387,34 @@ document.write(`
 </div>
 <p><em>Class AI</em> cannot access <em>Ally</em>’s name, or <em>Enemy</em>’s damage. <em>Ally</em> cannot access <em>Enemy</em>’s damage, and we know the rest. However, the little Ally / Enemy : AI, means <em>Ally</em> and <em>Enemy</em> are <strong>derived</strong> of the <em>AI</em> class, they will have the same variables, and the same functions. <em><strong>Protected</strong></em> allows <em>Ally</em> / <em>Enemy</em> to access their own health, yet <em><strong>private</strong></em> prevents them from accessing their own speed. You don’t really need to know this yet as we’ll touch more on that when we talk about <strong>inherited / derived</strong> classes.</p>
 </section>
+</section>
+<section id="variable-types">
+<h2>Variable types<a class="headerlink" href="#variable-types" title="Link to this heading">#</a></h2>
+<p>This shouldn’t be that complex, and very similar to Python. In Python we have a few types, int, string, float, bool, list, and dict. These correspond to whole numbers, words, decimal / whole numbers, true / false, a list of items, and key / value pairs. C# has these basically word for word, and you would define them after the private / protected / public. Here is an example of them all below. The highlighted ones are more complex.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">//Types.cs</span>
+<span class="linenos"> 2</span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Types</span>
+<span class="linenos"> 3</span><span class="p">{</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">health</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Devourer of Souls&quot;</span><span class="p">;</span><span class="w"> </span>
+<span class="linenos"> 6</span><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">10.1f</span><span class="p">;</span><span class="w">      </span><span class="c1">// The f is required when designating something as a float</span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">ascended_to_godhood</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="w">    </span><span class="c1">// We didn&#39;t need to set the values of the above, and could have left then as their defaults, usually 0, &quot;&quot;, and false.</span>
+<span class="linenos">10</span>
+<span class="hll"><span class="linenos">11</span><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Followers</span><span class="o">&gt;</span><span class="w"> </span><span class="n">followers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Followers</span><span class="o">&gt;</span><span class="p">();</span><span class="w">      </span><span class="c1">// This line is a bit interesting, we create a List of a type, we chose Followers, a class can be used a type and is a neccesity.</span>
+</span><span class="hll"><span class="linenos">12</span><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="n">Dictionary</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">object</span><span class="o">&gt;</span><span class="w"> </span><span class="n">weapons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dictionary</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">object</span><span class="o">&gt;</span><span class="p">();</span><span class="w">      </span><span class="c1">// This line creates a dictionary, where the key is always a string, but the value can be an int, float, bool, or anything. It might even be a custom Weapon or Spell class.</span>
+</span><span class="linenos">13</span>
+<span class="hll"><span class="linenos">14</span><span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">weapon</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">weapons</span><span class="p">[</span><span class="s">&quot;Bane of Mortals&quot;</span><span class="p">];</span><span class="w">       </span><span class="c1">// We use var instead of object as we only want weapon to accept a certain type, however that type is only decided when ran. Basically the type of weapon is ambigious until the code is ran.</span>
+</span><span class="linenos">15</span><span class="p">}</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="c1">//Follower.cs Just because</span>
+<span class="linenos">18</span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Follower</span>
+<span class="linenos">19</span><span class="p">{</span>
+<span class="linenos">20</span><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="linenos">21</span><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">health</span><span class="p">;</span>
+<span class="linenos">22</span><span class="p">}</span>
+</pre></div>
+</div>
 </section>
 </section>
 
@@ -430,6 +460,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#protected">Protected</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#variable-types">Variable types</a></li>
 </ul>
   </nav></div>
 
