@@ -326,13 +326,13 @@ document.write(`
 <section id="private">
 <h3>Private<a class="headerlink" href="#private" title="Link to this heading">#</a></h3>
 <p>A <em><strong>private</strong></em> variable, cannot be accessed by other scripts. The following code is extremely simple and will be a bit different what base Unity scripts look like, but it should give an idea of how these works.</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="err">#</span><span class="w"> </span><span class="n">A</span><span class="p">.</span><span class="n">cs</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">//A.cs</span>
 <span class="linenos"> 2</span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">A</span>
 <span class="linenos"> 3</span><span class="p">{</span>
 <span class="linenos"> 4</span><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">word</span><span class="p">;</span>
 <span class="linenos"> 5</span><span class="p">}</span>
 <span class="linenos"> 6</span>
-<span class="linenos"> 7</span><span class="err">#</span><span class="w"> </span><span class="n">B</span><span class="p">.</span><span class="n">cs</span>
+<span class="linenos"> 7</span><span class="c1">//B.cs</span>
 <span class="linenos"> 8</span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">B</span>
 <span class="linenos"> 9</span><span class="p">{</span>
 <span class="linenos">10</span><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">;</span><span class="w"> </span>
@@ -346,13 +346,13 @@ document.write(`
 <section id="public">
 <h3>Public<a class="headerlink" href="#public" title="Link to this heading">#</a></h3>
 <p>A <em><strong>public</strong></em> variable is the opposite of a <em><strong>private</strong></em> variable. It can be accessed by any other script. However, that doesn’t always mean we want to, especially with multiple developers. I’ll talk more about this later on.</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="err">#</span><span class="w"> </span><span class="n">A</span><span class="p">.</span><span class="n">cs</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">//A.cs</span>
 <span class="linenos"> 2</span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">A</span>
 <span class="linenos"> 3</span><span class="p">{</span>
 <span class="linenos"> 4</span><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">word</span><span class="p">;</span>
 <span class="linenos"> 5</span><span class="p">}</span>
 <span class="linenos"> 6</span>
-<span class="linenos"> 7</span><span class="err">#</span><span class="w"> </span><span class="n">B</span><span class="p">.</span><span class="n">cs</span>
+<span class="linenos"> 7</span><span class="c1">//B.cs</span>
 <span class="linenos"> 8</span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">B</span>
 <span class="linenos"> 9</span><span class="p">{</span>
 <span class="linenos">10</span><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">number</span><span class="p">;</span><span class="w"> </span>
@@ -363,20 +363,20 @@ document.write(`
 <section id="protected">
 <h3>Protected<a class="headerlink" href="#protected" title="Link to this heading">#</a></h3>
 <p>A <em><strong>protected</strong></em> variable is a bit different, but its basically a <em><strong>private</strong></em> variable with one key distinction. <em><strong>Protected</strong></em> variables are mainly used in <strong>inherited</strong> classes, also thought of as subclasses. Below is a simplified example.</p>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="err">#</span><span class="w"> </span><span class="n">AI</span><span class="p">.</span><span class="n">cs</span>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">//AI.cs</span>
 <span class="linenos"> 2</span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">AI</span>
 <span class="linenos"> 3</span><span class="p">{</span>
 <span class="linenos"> 4</span><span class="w">    </span><span class="k">protected</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">health</span><span class="p">;</span>
 <span class="linenos"> 5</span><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">speed</span><span class="p">;</span>
 <span class="linenos"> 6</span><span class="p">}</span>
 <span class="linenos"> 7</span>
-<span class="linenos"> 8</span><span class="err">#</span><span class="w"> </span><span class="n">Ally</span><span class="p">.</span><span class="n">cs</span>
+<span class="linenos"> 8</span><span class="c1">//Ally.cs</span>
 <span class="linenos"> 9</span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Ally</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">AI</span>
 <span class="linenos">10</span><span class="p">{</span>
 <span class="linenos">11</span><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
 <span class="linenos">12</span><span class="p">}</span>
 <span class="linenos">13</span>
-<span class="linenos">14</span><span class="err">#</span><span class="w"> </span><span class="n">Enemy</span><span class="p">.</span><span class="n">cs</span>
+<span class="linenos">14</span><span class="c1">//Enemy.cs</span>
 <span class="linenos">15</span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">Enemy</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">AI</span>
 <span class="linenos">16</span><span class="p">{</span>
 <span class="linenos">17</span><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">damage</span><span class="p">;</span>

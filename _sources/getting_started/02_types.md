@@ -9,13 +9,13 @@ A _**private**_ variable, cannot be accessed by other scripts. The following cod
 
 ```{code-block} csharp
 :linenos:
-# A.cs
+//A.cs
 public class A
 {
     private string word;
 }
 
-# B.cs
+//B.cs
 public class B
 {
     private int number; 
@@ -31,13 +31,13 @@ Red - Where the error occured. Yellow, - the character, then the line. Green - t
 A _**public**_ variable is the opposite of a _**private**_ variable. It can be accessed by any other script. However, that doesn't always mean we want to, especially with multiple developers. I'll talk more about this later on.
 ```{code-block} csharp
 :linenos:
-# A.cs
+//A.cs
 public class A
 {
     public string word;
 }
 
-# B.cs
+//B.cs
 public class B
 {
     public int number; 
@@ -49,20 +49,20 @@ A _**protected**_ variable is a bit different, but its basically a _**private**_
 
 ```{code-block} csharp
 :linenos:
-# AI.cs
+//AI.cs
 public class AI
 {
     protected int health;
     private int speed;
 }
 
-# Ally.cs
+//Ally.cs
 public class Ally : AI
 {
     private string name;
 }
 
-# Enemy.cs
+//Enemy.cs
 public class Enemy : AI
 {
     private int damage;
