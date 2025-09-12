@@ -2,5 +2,7 @@
 
 ```{toctree}
 :maxdepth: 2
+:includehidden:
 
-01_installing.md
+getting_started/01_installing
+getting_started/02_types
