@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Installing &#8212; Unity-Tutorial  documentation</title>
+    <title>Making our First Project &#8212; Unity-Tutorial  documentation</title>
   
   
   
@@ -42,12 +42,11 @@
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'getting_started/01_installing';</script>
-    <link rel="canonical" href="https://spamta-clause.github.io/unity-tutorials/getting_started/01_installing.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'first_project/04_making';</script>
+    <link rel="canonical" href="https://spamta-clause.github.io/unity-tutorials/first_project/04_making.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="A quick overview of C#" href="02_overview.html" />
-    <link rel="prev" title="Unity Tutorials" href="../index.html" />
+    <link rel="prev" title="Types in C#" href="../getting_started/03_types.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -152,11 +151,11 @@
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Installing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02_overview.html">A quick overview of C#</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_types.html">Types in C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/01_installing.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/02_overview.html">A quick overview of C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/03_types.html">Types in C#</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="../first_project/04_making.html">Making our First Project</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Making our First Project</a></li>
 </ul>
 
     </div>
@@ -211,7 +210,7 @@
       
       
       
-      <li><a href="../_sources/getting_started/01_installing.md" target="_blank"
+      <li><a href="../_sources/first_project/04_making.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -295,7 +294,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Installing</h1>
+    <h1>Making our First Project</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -305,10 +304,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unity">Unity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-studio-code">Visual Studio Code</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-desktop">Github Desktop</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#back-on-track">Back on track</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scene-hierarchy">Scene Hierarchy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inspector">Inspector</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-and-console">Project and Console</a></li>
 </ul>
             </nav>
         </div>
@@ -320,27 +318,26 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="installing">
-<h1>Installing<a class="headerlink" href="#installing" title="Link to this heading">#</a></h1>
-<section id="unity">
-<h2>Unity<a class="headerlink" href="#unity" title="Link to this heading">#</a></h2>
-<p>Firstly, we’ll need Unity, (big shocker wow), to do that, we’ll head right over to downloading <a class="reference external" href="https://unity.com/download"><strong>Unity Hub</strong></a>, and click on ‘Download for Windows’, if you are using Mac, gtfo.</p>
-<p>Now that the weirdos are gone, we have to sign in. Do that with google or whatever the fuck you want. Just accept the terms and conditions (you are selling your soul but its fine, we’re getting sent into the cuphead universe).</p>
-<p>We’re going to install Unity, again, you see, we installed Unity Hub before, not Unity. Basically Unity Hub is just something that gives us access to the different versions, and some templates. We’re using Unity 6.2(<strong>6000.0.57f1</strong>) if it doesn’t have this automatically showing up, click skip installation, head over to installs on the left. Click the blue ‘Install Editor’ button, and select <strong>6000.0.57f1</strong>.</p>
-<p><img alt="Annotated" src="../_images/01_01.png" /></p>
-<p>We don’t need to select any of the checkboxes, and deselect the Visual Studio Community, we’ll be using Visual Studio Code. VSC instead of VSC isn’t it obvious? If you think you will be working offline for a significant amount of time, you can choose to install the documentation down on the bottom, otherwise, its available online.</p>
+  <section id="making-our-first-project">
+<h1>Making our First Project<a class="headerlink" href="#making-our-first-project" title="Link to this heading">#</a></h1>
+<p>Unity better have installed by now because we are creating our first project. Select the blue, ‘New Project’ button. Name it whatever you want and put it in whatever folder you want. But we will select ‘Universal 2D’ in the middle section. Once you’re ready, hit ‘Create Project’.</p>
+<p>Now we’ll wait for a minute or so, and we can look at what everything means in the meantime;
+<img alt="Unity View" src="../_images/04_01.png" /></p>
+<section id="scene-hierarchy">
+<h2>Scene Hierarchy<a class="headerlink" href="#scene-hierarchy" title="Link to this heading">#</a></h2>
+<p>On the left, we have our <em>scene hierarchy</em> anything in our <em>scene</em> will show up here. And a <em>scene</em> is basically a room in Space Rescue. Its just a differen’t section of the game. For Minecraft you’d have something like this, Game, Multiplayer, Worlds, etc. and you can swap between them.</p>
 </section>
-<section id="visual-studio-code">
-<h2>Visual Studio Code<a class="headerlink" href="#visual-studio-code" title="Link to this heading">#</a></h2>
-<p>Wait. It’ll take a minute or five. In the mean time, we’ll install Visual Studio Code, you should all have it installed actually.</p>
+<section id="inspector">
+<h2>Inspector<a class="headerlink" href="#inspector" title="Link to this heading">#</a></h2>
+<p><img alt="Inspector" src="../_images/04_02.png" /></p>
+<p>On the right we have the inspector, one of the most important sections in our view. I’ve just selected an empty GameObject (basically the fundamental root of everything in Unity), and it only has one script attached, that being the <code class="docutils literal notranslate"><span class="pre">Transform</span></code> script, it has a <code class="docutils literal notranslate"><span class="pre">position</span></code> - Vector 3, <code class="docutils literal notranslate"><span class="pre">rotation</span></code> - “Vector 3”, and <code class="docutils literal notranslate"><span class="pre">scale</span></code> - Vector 3. A Vector 3, is just a position in 3D Space, for example, (1,2,0), we’ll normally keep <code class="docutils literal notranslate"><span class="pre">z</span></code> as zero because this is 2D. Unity will convert our Vector 3 rotation to a Quaternion, which is basically complex math for determing angles because Vector 3s had issues, and I’ll talk more about rotation later on.</p>
+<p>Also on the inspector we can add a new script, lock it, to keep the inspector showing the GameObject, even if we select the Camera, and disable the object entirely. We can also change the Tag, and Layer of the Object which will be used for ignoring certain objects.</p>
 </section>
-<section id="github-desktop">
-<h2>Github Desktop<a class="headerlink" href="#github-desktop" title="Link to this heading">#</a></h2>
-<p>You also have this right? And we don’t need it yet really.</p>
-</section>
-<section id="back-on-track">
-<h2>Back on track<a class="headerlink" href="#back-on-track" title="Link to this heading">#</a></h2>
-<p>Has Unity finished installing yet, well the next page doesn’t need it.</p>
+<section id="project-and-console">
+<h2>Project and Console<a class="headerlink" href="#project-and-console" title="Link to this heading">#</a></h2>
+<p>Down the bottom we have the <em>Project</em> and the <em>Console</em> windows, project is really simple, it shows files. You can also make folders. Please keep files organised. We can select the <em>Console</em> windows which will show us all of our errors.</p>
+<p><img alt="Console Window" src="../_images/04_03.png" /></p>
+<p>We have the <em>Logs</em> - Speech Bubble, <em>Warnings</em> - Warning sign, and <em>Errors</em> - Stop sign. If we press on each of these it toggles the visibility of those types of messages. Each of these correlates to the <code class="docutils literal notranslate"><span class="pre">Debug.Logs</span></code> we talked about in <a class="reference internal" href="../getting_started/02_overview.html"><span class="std std-doc">A quick overview of C#</span></a>.</p>
 </section>
 </section>
 
@@ -356,22 +353,13 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../index.html"
+       href="../getting_started/03_types.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Unity Tutorials</p>
+        <p class="prev-next-title">Types in C#</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="02_overview.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">A quick overview of C#</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -389,10 +377,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unity">Unity</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#visual-studio-code">Visual Studio Code</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#github-desktop">Github Desktop</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#back-on-track">Back on track</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scene-hierarchy">Scene Hierarchy</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inspector">Inspector</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-and-console">Project and Console</a></li>
 </ul>
   </nav></div>
 
