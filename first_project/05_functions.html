@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>A quick overview of C# &#8212; Unity-Tutorial  documentation</title>
+    <title>Key Unity Functions &#8212; Unity-Tutorial  documentation</title>
   
   
   
@@ -42,12 +42,11 @@
     <script src="../_static/doctools.js?v=9bcbadda"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'getting_started/02_overview';</script>
-    <link rel="canonical" href="https://spamta-clause.github.io/unity-tutorials/getting_started/02_overview.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'first_project/05_functions';</script>
+    <link rel="canonical" href="https://spamta-clause.github.io/unity-tutorials/first_project/05_functions.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Types in C#" href="03_types.html" />
-    <link rel="prev" title="Installing" href="01_installing.html" />
+    <link rel="prev" title="Making our First Project" href="04_making.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -152,12 +151,12 @@
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01_installing.html">Installing</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">A quick overview of C#</a></li>
-<li class="toctree-l1"><a class="reference internal" href="03_types.html">Types in C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/01_installing.html">Installing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/02_overview.html">A quick overview of C#</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/03_types.html">Types in C#</a></li>
 
-<li class="toctree-l1"><a class="reference internal" href="../first_project/04_making.html">Making our First Project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../first_project/05_functions.html">Key Unity Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_making.html">Making our First Project</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Key Unity Functions</a></li>
 </ul>
 
     </div>
@@ -212,7 +211,7 @@
       
       
       
-      <li><a href="../_sources/getting_started/02_overview.md" target="_blank"
+      <li><a href="../_sources/first_project/05_functions.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -294,7 +293,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>A quick overview of C#</h1>
+    <h1>Key Unity Functions</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -308,30 +307,50 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="a-quick-overview-of-c">
-<h1>A quick overview of C#<a class="headerlink" href="#a-quick-overview-of-c" title="Link to this heading">#</a></h1>
-<p>Three main things,</p>
-<ul class="simple">
-<li><p>C# is C-Sharp, don’t call it C-Hashtag, or Hashtag C, you will be murdered.</p></li>
-<li><p>C# files are saved as <code class="docutils literal notranslate"><span class="pre">.cs</span></code>.</p></li>
-<li><p>Most finished lines of code end with a semicolon <code class="docutils literal notranslate"><span class="pre">;</span></code>. This means you can split a single line of code into multiple lines for formatting.</p></li>
-<li><p>Blocks, like classes, if statements, while loops, function definitions, and more end with curly brackets <code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">}</span></code>.</p></li>
-<li><p>And <code class="docutils literal notranslate"><span class="pre">//</span></code> represents a comment and will not be executed.</p></li>
-</ul>
-<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">//script.cs</span>
-<span class="linenos"> 2</span><span class="k">class</span><span class="w"> </span><span class="nc">script</span>
+  <section id="key-unity-functions">
+<h1>Key Unity Functions<a class="headerlink" href="#key-unity-functions" title="Link to this heading">#</a></h1>
+<p>Now we are going to go over the main functions in Unity, you’ll have some of these in every single script pretty much.</p>
+<p>Firstly we have <code class="docutils literal notranslate"><span class="pre">Awake()</span> <span class="pre">{</span> <span class="pre">}</span></code>, this is ran when the object is first loaded, next we have <code class="docutils literal notranslate"><span class="pre">Start()</span> <span class="pre">{</span> <span class="pre">}</span></code>, ran after all Awakes are done, even the ones on other objects! Next, we have our Updates, <code class="docutils literal notranslate"><span class="pre">Update()</span> <span class="pre">{</span> <span class="pre">}</span></code> is ran every single frame, and <code class="docutils literal notranslate"><span class="pre">FixedUpdate()</span> <span class="pre">{</span> <span class="pre">}</span></code> is ran 60 times per second, provided your computer can handle it. Below is some code that is mostly functional.</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1">//A.cs</span>
+<span class="linenos"> 2</span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span><span class="w"> </span><span class="c1">//MonoBehaviour is basically our fundamental base class for every Unity script, as it sets up some key variables.</span>
 <span class="linenos"> 3</span><span class="p">{</span>
-<span class="linenos"> 4</span><span class="w">    </span><span class="kt">bool</span><span class="w"> </span><span class="n">true_or_false</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">true</span><span class="p">;</span>
-<span class="linenos"> 5</span><span class="w">    </span><span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&quot;Hello World);</span>
-<span class="linenos"> 6</span>
-<span class="linenos"> 7</span><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">boolean</span><span class="p">)</span>
+<span class="linenos"> 4</span><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value_one</span><span class="p">;</span>
+<span class="linenos"> 5</span><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value_two</span><span class="p">;</span>
+<span class="linenos"> 6</span><span class="w">    </span>
+<span class="linenos"> 7</span><span class="w">    </span><span class="k">void</span><span class="w"> </span><span class="nf">Awake</span><span class="p">()</span>
 <span class="linenos"> 8</span><span class="w">    </span><span class="p">{</span>
-<span class="linenos"> 9</span><span class="w">        </span><span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="s">&quot;True&quot;</span><span class="p">);</span>
+<span class="linenos"> 9</span><span class="w">        </span><span class="n">value_one</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="linenos">10</span><span class="w">    </span><span class="p">}</span>
-<span class="linenos">11</span><span class="p">}</span>
+<span class="linenos">11</span>
+<span class="linenos">12</span><span class="w">    </span><span class="k">void</span><span class="w"> </span><span class="nf">Start</span><span class="p">()</span>
+<span class="linenos">13</span><span class="w">    </span><span class="p">{</span>
+<span class="linenos">14</span><span class="w">        </span><span class="n">value_two</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="linenos">15</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">16</span>
+<span class="linenos">17</span><span class="w">    </span><span class="k">void</span><span class="w"> </span><span class="nf">Update</span><span class="p">()</span>
+<span class="linenos">18</span><span class="w">    </span><span class="p">{</span>
+<span class="linenos">19</span><span class="w">        </span><span class="n">value_one</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="linenos">20</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">21</span>
+<span class="linenos">22</span><span class="w">    </span><span class="k">void</span><span class="w"> </span><span class="nf">FixedUpdate</span><span class="p">()</span>
+<span class="linenos">23</span><span class="w">    </span><span class="p">{</span>
+<span class="linenos">24</span><span class="w">        </span><span class="n">value_two</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="linenos">25</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">26</span><span class="p">}</span>
+<span class="linenos">27</span>
+<span class="linenos">28</span><span class="c1">//B.cs</span>
+<span class="linenos">29</span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">B</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">MonoBehaviour</span>
+<span class="linenos">30</span><span class="p">{</span>
+<span class="linenos">31</span><span class="w">    </span><span class="k">void</span><span class="w"> </span><span class="nf">Start</span><span class="p">()</span>
+<span class="linenos">32</span><span class="w">    </span><span class="p">{</span>
+<span class="linenos">33</span><span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FindObjectOfType</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="p">().</span><span class="n">GetComponent</span><span class="o">&lt;</span><span class="n">A</span><span class="o">&gt;</span><span class="p">();</span><span class="w"> </span><span class="c1">//Finds the first object that has the script A on it. Then finds A on that object.</span>
+<span class="linenos">34</span><span class="w">        </span><span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="n">A</span><span class="p">.</span><span class="n">value_one</span><span class="p">);</span>
+<span class="hll"><span class="linenos">35</span><span class="w">        </span><span class="n">Debug</span><span class="p">.</span><span class="n">Log</span><span class="p">(</span><span class="n">A</span><span class="p">.</span><span class="n">value_two</span><span class="p">);</span>
+</span><span class="linenos">36</span><span class="w">    </span><span class="p">}</span>
+<span class="linenos">37</span><span class="p">}</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">Debug.Log</span></code> is basically Unity’s version of a print statement, and comes in three variations, <span class='teal'>Debug.Log</span>, <span class='yellow'>Debug.LogWarning</span>, and <span class='red'>Debug.LogError</span>. These will send messages to one of three tabs in the Console window in Unity.</p>
+<p>This code should work, <code class="docutils literal notranslate"><span class="pre">value_one</span></code> would be printed as 1, and <code class="docutils literal notranslate"><span class="pre">value_two</span></code> would be printed as 2. <code class="docutils literal notranslate"><span class="pre">value_one</span></code> will also be 238, or 7, or 94, after one second, or any other number. <code class="docutils literal notranslate"><span class="pre">value_two</span></code> will be 122. This code is horrible though, specifically because of the suspicously highlighted line. Why you ask? Well what if we had a lot more in A’s Start function before we define the value of <code class="docutils literal notranslate"><span class="pre">value_two</span></code>? What will happen is B’s Start function will log <code class="docutils literal notranslate"><span class="pre">value_two</span></code> before A’s Start function defines the value of <code class="docutils literal notranslate"><span class="pre">value_two</span></code> and will log it as 0. This will never occur with <code class="docutils literal notranslate"><span class="pre">value_one</span></code> as B’s Start function will only run once A, and everyone else’s Awake functions are done. Basically, setup references to other scripts in Awake, or define values, but never try and get values and just use Start for that.</p>
 </section>
 
 
@@ -346,22 +365,13 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="01_installing.html"
+       href="04_making.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Installing</p>
+        <p class="prev-next-title">Making our First Project</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="03_types.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Types in C#</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

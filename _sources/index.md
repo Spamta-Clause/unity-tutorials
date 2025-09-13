@@ -9,3 +9,4 @@ getting_started/02_overview
 getting_started/03_types
 
 first_project/04_making
+first_project/05_functions
